@@ -1,0 +1,27 @@
+package br.edu.utfpr.teste;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import br.edu.utfpr.trabalho.CalcularRitmoCorrida;
+
+public class CalcularRitmoCorridaTeste {
+
+	CalcularRitmoCorrida calc;
+	
+	@Before
+	public void inicializa(){
+		calc = new CalcularRitmoCorrida();
+	}
+	
+	@Test
+	public void testeCalculaRitmo() {
+		int distanciaKm = 10;
+		int tempoEmSegundos = 3600;
+		int ritmoSegundoPorKm = 360;
+		assertEquals(ritmoSegundoPorKm, calc.calcularRitmoKM(tempoEmSegundos,distanciaKm ));
+	}
+
+}
